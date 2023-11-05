@@ -1,0 +1,191 @@
+:root {
+    --bg: #164863;
+    --bg2: #053B50;
+    --txt: #DDF2FD;
+    --txt2: #ebd173;
+}
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: var(--txt);
+    text-transform: capitalize;
+    /* height: 1000vh; */
+}
+
+/* navbar */
+nav.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 7%;
+    background-color: rgba(5, 60, 81, 0.8);
+    border-bottom: 1px solid var(--txt2);
+
+    position: fixed;
+    inset-block-start: 0;
+    inset-inline: 0;
+    z-index: 9999;
+}
+nav.navbar .navbar-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--txt);
+}
+nav.navbar .navbar-logo span {
+    color: var(--txt2);
+}
+
+nav.navbar .navbar-nav a {
+    color: var(--txt);
+    display: inline-block;
+    font-size: 1.1rem;
+    margin: 0 1rem;
+}
+nav.navbar .navbar-nav a:hover {
+    color: var(--txt2);
+}
+nav.navbar .navbar-nav a::after {
+    content: '';
+    display: block;
+    border-bottom: 1px solid var(--txt2);
+    transform: scaleX(0);
+    transition: .2s linear;
+}
+nav.navbar .navbar-nav a:hover::after {
+    transform: scaleX(1);
+}
+
+nav.navbar .navbar-extra a {
+    color: var(--txt2);
+    margin: 0 .5rem;
+}
+nav.navbar .navbar-extra #hamburger-menu {
+    display: none;
+}
+
+/* landing page */
+.landing {
+    /* border: 1px solid black; */
+
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+}
+.landing main.landing-content {
+    /* border: 1px solid black; */
+
+    display: flex;
+    align-items: center;
+
+}
+.landing main.landing-content .kyotogarden-text {
+    /* border: 1px solid black; */
+}
+.landing main.landing-content .kyotogarden-text h1 {
+    font-size: 5rem;
+}
+.landing main.landing-content .kyotogarden-text h1 span {
+    color: var(--txt2);
+}
+.landing main.landing-content .kyotogarden-text p {
+    color: var(--txt);
+    font-size: 1.3rem;
+}
+.landing main.landing-content .kyotogarden-text a {
+    display: inline-block;
+    padding: .2rem 1rem;
+    margin-top: 10px;
+
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--bg);
+    font-size: 1.3rem;
+    background-color: #ebd173;
+    border: 3px solid var(--txt2);
+    border-radius: 999px;
+
+    transition: all .2s ease;
+}
+.landing main.landing-content .kyotogarden-text a:hover {
+    color: var(--txt2);
+    background-color: transparent;
+}
+
+
+
+
+
+/* media queries */
+
+/* laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+    html {
+        font-size: 62.5%;
+    }
+    nav.navbar .navbar-extra #hamburger-menu {
+        display: inline-block;
+    }
+    nav.navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: rgba(5, 60, 81, 0.8);
+        width: 20rem;
+        height: 100vh;
+        transition: .3s;
+    }
+    nav.navbar .navbar-nav.active {
+        right: 0;
+    }
+    nav.navbar .navbar-nav a {
+        display: block;
+        margin: 1.5rem;
+        padding: .5rem;
+        font-size: 1.5rem;
+    }
+    nav.navbar .navbar-nav a::after {
+        transform-origin: 0 0;
+    }
+    nav.navbar .navbar-nav a:hover::after {
+        transform: scaleX(.3);
+    }
+
+    .landing main.landing-content {
+        flex-direction: column;
+        /* align-self: flex-end; */
+    }
+    .landing main.landing-content img {
+        padding-top: 8rem;
+        height: 70%;
+    }
+}
+
+/* handphone */
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+}
