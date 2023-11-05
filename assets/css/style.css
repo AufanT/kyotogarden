@@ -78,7 +78,7 @@ nav.navbar .navbar-extra #hamburger-menu {
 
 /* landing page */
 .landing {
-    /* border: 1px solid black; */
+    border: 1px solid black;
 
     min-height: 100vh;
     max-width: 1200px;
