@@ -94,9 +94,9 @@ nav.navbar .navbar-extra #hamburger-menu {
     align-items: center;
 
 }
-.landing main.landing-content .kyotogarden-text {
-    /* border: 1px solid black; */
-}
+/* .landing main.landing-content .kyotogarden-text {
+    border: 1px solid black;
+} */
 .landing main.landing-content .kyotogarden-text h1 {
     font-size: 5rem;
 }
