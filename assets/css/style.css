@@ -22,7 +22,7 @@ body {
     background-color: var(--bg);
     color: var(--txt);
     text-transform: capitalize;
-    height: 200vh;
+    height: 1000vh;
 }
 
 /* navbar */
