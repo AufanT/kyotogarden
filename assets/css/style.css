@@ -22,7 +22,7 @@ body {
     background-color: var(--bg);
     color: var(--txt);
     text-transform: capitalize;
-    height: 1000vh;
+    /* height: 1000vh; */
 }
 
 /* navbar */
@@ -78,7 +78,7 @@ nav.navbar .navbar-extra #hamburger-menu {
 
 /* landing page */
 .landing {
-    border: 1px solid black;
+    /* border: 1px solid black; */
 
     min-height: 100vh;
     max-width: 1200px;
