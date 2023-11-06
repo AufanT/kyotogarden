@@ -76,27 +76,20 @@ nav.navbar .navbar-extra #hamburger-menu {
     display: none;
 }
 
+
+
 /* landing page */
 .landing {
-    /* border: 1px solid black; */
-
     height: 100vh;
-    max-width: 1200px;
-    margin: auto;
-
-    display: flex;
     justify-content: center;
 }
 .landing main.landing-content {
-    /* border: 1px solid black; */
+    /* border: 1px solid black;     */
 
     display: flex;
     align-items: center;
 
 }
-/* .landing main.landing-content .kyotogarden-text {
-    border: 1px solid black;
-} */
 .landing main.landing-content .kyotogarden-text h1 {
     font-size: 5rem;
 }
@@ -126,6 +119,118 @@ nav.navbar .navbar-extra #hamburger-menu {
     color: var(--txt2);
     background-color: transparent;
 }
+
+/* section style settings */
+section {
+    /* border: 1px solid black; */
+
+    /* height: 100vh; */
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+}
+section h2 {
+    color: var(--txt2);
+    font-weight: 300;
+    font-size: 3rem;
+    text-align: center;
+
+    padding-top: 5rem;
+}
+
+/* card */
+.series-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-block: 1rem;
+}
+.series-card a.thumb {
+    /* border: 1px solid green;  */
+
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+    width: 200px;
+    border-radius: 10px;
+}
+.series-card a.thumb img {
+    width: 100%;
+    object-fit: fill;
+    object-position: top;
+    border-radius: 10px;
+    vertical-align: middle;
+
+    transition: 0.2s ease-in-out;
+}
+.series-card a.thumb img:hover {
+    transform: scale(1.1);
+}
+.series-card a.thumb span{
+    position: absolute;
+    inset-block-start: 10px;
+    inset-inline-start: 10px;
+
+    color: var(--txt);
+    padding: .1rem 3%;
+    font-size: .8rem;
+}
+.series-card .title {
+    color: var(--txt);
+    font-weight: 700;
+    font-size: 1.2rem;
+
+    margin-block: .8rem;
+}
+.series-card .chapter {
+    /* border: 1px solid green;  */
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.series-card .chapter a {
+    color: var(--txt);
+    font-size: .8rem;
+}
+
+/* badges */
+.manga-badges {
+    background-color: rgb(187, 0, 0);
+}
+.manhwa-badges {
+    background-color: rgb(25, 0, 187);
+}
+
+
+/* today */
+.today {
+    /* border: 1px solid green;  */
+
+    flex-direction: column;
+    max-width: 1700px;
+    padding-inline: 2%;
+}
+.today main.today-content {
+    display: flex;
+    gap: .8rem;
+
+    overflow-x: scroll;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -181,13 +286,18 @@ nav.navbar .navbar-extra #hamburger-menu {
         padding-top: 8rem;
         height: 70%;
     }
+
+    .series-card a.thumb  {
+        width: 150px;
+    }
 }
 
 /* handphone */
 @media (max-width: 450px) {
     html {
-        font-size: 55%;
+        font-size: 60%;
     }
+
     .landing main.landing-content img {
         padding-top: 8rem;
         height: 60%;
