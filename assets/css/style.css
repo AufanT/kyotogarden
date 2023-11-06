@@ -236,6 +236,7 @@ section h2 {
 
 
 
+
 /* media queries */
 
 /* laptop */
@@ -250,6 +251,7 @@ section h2 {
     html {
         font-size: 62.5%;
     }
+
     nav.navbar .navbar-extra #hamburger-menu {
         display: inline-block;
     }
