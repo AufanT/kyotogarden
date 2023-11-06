@@ -181,7 +181,7 @@ section h2 {
 .series-card .title {
     color: var(--txt);
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 
     margin-block: .8rem;
 }
@@ -193,8 +193,9 @@ section h2 {
     justify-content: space-between;
 }
 .series-card .chapter a {
-    color: var(--txt);
-    font-size: .8rem;
+    color: var(--txt2);
+    font-size: 1rem;
+    text-transform: lowercase;
 }
 
 /* badges */
@@ -205,22 +206,86 @@ section h2 {
     background-color: rgb(25, 0, 187);
 }
 
-
-/* today */
-.today {
+/* komik section */
+.komik-container {
     /* border: 1px solid green;  */
 
     flex-direction: column;
     max-width: 1700px;
     padding-inline: 2%;
 }
-.today main.today-content {
+
+
+/* today */
+.komik-container main.today-content {
     display: flex;
     gap: .8rem;
 
     overflow-x: scroll;
 }
 
+
+/* manhwa and manga */
+.komik-container  main.komik-content {
+    /* border: 1px solid black;  */
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: .8rem;
+}
+
+/* footer */
+footer {
+    height: 15rem;
+    margin-top: 5rem;
+    padding-block: .5rem;
+    background-color: var(--bg2);
+}
+
+footer .footer-content {
+    /* border: 1px solid black; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+
+    width: 600px;
+    height: 100%;
+    margin: auto;
+}
+
+footer .footer-content .kyotogarden {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .footer-content .kyotogarden img {
+    width: 80px;
+}
+
+footer .footer-content .kyotogarden h4 {
+    font-size: 2rem;
+}
+footer .footer-content .kyotogarden h4 span {
+    color: var(--txt2);
+}
+
+footer .footer-content .kyotogarden p,
+footer .footer-content .copyright {
+    font-size: .7rem;
+    text-align: center;
+}
+
+footer .footer-content .social a {
+    color: var(--txt);
+    transition: .2s ease-in;
+}
+footer .footer-content .social a:hover {
+    color: var(--txt2);
+}
 
 
 
@@ -303,6 +368,10 @@ section h2 {
     .landing main.landing-content img {
         padding-top: 8rem;
         height: 60%;
+    }
+
+    .komik-container  main.komik-content {
+        justify-content: center;
     }
 
 }
