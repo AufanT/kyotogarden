@@ -174,8 +174,8 @@ section h2 {
 
     display: block;
     overflow: hidden;
-    width: 270px;
-    max-height: 400px;
+    width: 180px;
+    max-height: 300px;
 
     border-radius: 10px;
 }
@@ -209,7 +209,7 @@ section h2 {
 .series-card .title {
     color: var(--txt);
     font-weight: 700;
-    font-size: 1.7rem;
+    font-size: 1.3rem;
 
     margin-block: .8rem;
 }
@@ -224,7 +224,7 @@ section h2 {
 
 .series-card .chapter a {
     color: var(--txt2);
-    font-size: 1.2rem;
+    font-size: .8rem;
     text-transform: lowercase;
 }
 
@@ -242,7 +242,7 @@ section h2 {
     /* border: 1px solid green;  */
 
     flex-direction: column;
-    max-width: 1700px;
+    max-width: 1220px;
     padding-inline: 2%;
 }
 
@@ -279,14 +279,14 @@ section h2 {
 /* laptop */
 @media (max-width: 1366px) {
     html {
-        font-size: 90%;
+        font-size: 75%;
     }
 }
 
 /* tablet */
 @media (max-width: 768px) {
     html {
-        font-size: 80%;
+        font-size: 62.5%;
     }
 
     nav.navbar .navbar-extra #hamburger-menu {
@@ -340,7 +340,7 @@ section h2 {
 /* handphone */
 @media (max-width: 450px) {
     html {
-        font-size: 60%;
+        font-size: 55%;
     }
 
     .landing main.landing-content img {
