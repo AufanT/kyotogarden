@@ -80,7 +80,7 @@ nav.navbar .navbar-extra #hamburger-menu {
 .landing {
     /* border: 1px solid black; */
 
-    min-height: 100vh;
+    height: 100vh;
     max-width: 1200px;
     margin: auto;
 
@@ -188,4 +188,9 @@ nav.navbar .navbar-extra #hamburger-menu {
     html {
         font-size: 55%;
     }
+    .landing main.landing-content img {
+        padding-top: 8rem;
+        height: 60%;
+    }
+
 }
