@@ -4,6 +4,7 @@
     --txt: #DDF2FD;
     --txt2: #ebd173;
 }
+
 *,
 ::before,
 ::after {
@@ -14,9 +15,11 @@
     border: none;
     text-decoration: none;
 }
+
 html {
     scroll-behavior: smooth;
 }
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--bg);
@@ -33,17 +36,20 @@ nav.navbar {
     padding: 1.2rem 7%;
     background-color: rgba(5, 60, 81, 0.8);
     border-bottom: 1px solid var(--txt2);
+    backdrop-filter: blur(10px);
 
     position: fixed;
     inset-block-start: 0;
     inset-inline: 0;
     z-index: 9999;
 }
+
 nav.navbar .navbar-logo {
     font-size: 2rem;
     font-weight: 700;
     color: var(--txt);
 }
+
 nav.navbar .navbar-logo span {
     color: var(--txt2);
 }
@@ -54,9 +60,11 @@ nav.navbar .navbar-nav a {
     font-size: 1.1rem;
     margin: 0 1rem;
 }
+
 nav.navbar .navbar-nav a:hover {
     color: var(--txt2);
 }
+
 nav.navbar .navbar-nav a::after {
     content: '';
     display: block;
@@ -64,6 +72,7 @@ nav.navbar .navbar-nav a::after {
     transform: scaleX(0);
     transition: .2s linear;
 }
+
 nav.navbar .navbar-nav a:hover::after {
     transform: scaleX(1);
 }
@@ -72,6 +81,7 @@ nav.navbar .navbar-extra a {
     color: var(--txt2);
     margin: 0 .5rem;
 }
+
 nav.navbar .navbar-extra #hamburger-menu {
     display: none;
 }
@@ -80,26 +90,33 @@ nav.navbar .navbar-extra #hamburger-menu {
 
 /* landing page */
 .landing {
+    /* border: 1px solid black;     */
+
     height: 100vh;
     justify-content: center;
 }
+
 .landing main.landing-content {
     /* border: 1px solid black;     */
 
     display: flex;
     align-items: center;
-
+    justify-content: center;
 }
+
 .landing main.landing-content .kyotogarden-text h1 {
     font-size: 5rem;
 }
+
 .landing main.landing-content .kyotogarden-text h1 span {
     color: var(--txt2);
 }
+
 .landing main.landing-content .kyotogarden-text p {
     color: var(--txt);
     font-size: 1.3rem;
 }
+
 .landing main.landing-content .kyotogarden-text a {
     display: inline-block;
     padding: .2rem 1rem;
@@ -115,6 +132,7 @@ nav.navbar .navbar-extra #hamburger-menu {
 
     transition: all .2s ease;
 }
+
 .landing main.landing-content .kyotogarden-text a:hover {
     color: var(--txt2);
     background-color: transparent;
@@ -130,6 +148,7 @@ section {
 
     display: flex;
 }
+
 section h2 {
     color: var(--txt2);
     font-weight: 300;
@@ -147,17 +166,23 @@ section h2 {
 
     padding-block: 1rem;
 }
+
 .series-card a.thumb {
-    /* border: 1px solid green;  */
+    border: 1px solid green;
 
     position: relative;
 
     display: block;
     overflow: hidden;
     width: 200px;
+    max-height: 270px;
+
     border-radius: 10px;
 }
+
 .series-card a.thumb img {
+    border: 1px solid yellow;
+
     width: 100%;
     object-fit: fill;
     object-position: top;
@@ -166,10 +191,12 @@ section h2 {
 
     transition: 0.2s ease-in-out;
 }
+
 .series-card a.thumb img:hover {
     transform: scale(1.1);
 }
-.series-card a.thumb span{
+
+.series-card a.thumb span {
     position: absolute;
     inset-block-start: 10px;
     inset-inline-start: 10px;
@@ -178,6 +205,7 @@ section h2 {
     padding: .1rem 3%;
     font-size: .8rem;
 }
+
 .series-card .title {
     color: var(--txt);
     font-weight: 700;
@@ -185,6 +213,7 @@ section h2 {
 
     margin-block: .8rem;
 }
+
 .series-card .chapter {
     /* border: 1px solid green;  */
 
@@ -192,6 +221,7 @@ section h2 {
     display: flex;
     justify-content: space-between;
 }
+
 .series-card .chapter a {
     color: var(--txt2);
     font-size: 1rem;
@@ -202,6 +232,7 @@ section h2 {
 .manga-badges {
     background-color: rgb(187, 0, 0);
 }
+
 .manhwa-badges {
     background-color: rgb(25, 0, 187);
 }
@@ -218,6 +249,7 @@ section h2 {
 
 /* today */
 .komik-container main.today-content {
+    /* border: 1px solid black; */
     display: flex;
     gap: .8rem;
 
@@ -226,7 +258,7 @@ section h2 {
 
 
 /* manhwa and manga */
-.komik-container  main.komik-content {
+.komik-container main.komik-content {
     /* border: 1px solid black;  */
 
     display: flex;
@@ -247,19 +279,20 @@ section h2 {
 /* laptop */
 @media (max-width: 1366px) {
     html {
-        font-size: 75%;
+        font-size: 90%;
     }
 }
 
 /* tablet */
 @media (max-width: 768px) {
     html {
-        font-size: 62.5%;
+        font-size: 70%;
     }
 
     nav.navbar .navbar-extra #hamburger-menu {
         display: inline-block;
     }
+
     nav.navbar .navbar-nav {
         position: absolute;
         top: 100%;
@@ -269,18 +302,22 @@ section h2 {
         height: 100vh;
         transition: .3s;
     }
+
     nav.navbar .navbar-nav.active {
         right: 0;
     }
+
     nav.navbar .navbar-nav a {
         display: block;
         margin: 1.5rem;
         padding: .5rem;
         font-size: 1.5rem;
     }
+
     nav.navbar .navbar-nav a::after {
         transform-origin: 0 0;
     }
+
     nav.navbar .navbar-nav a:hover::after {
         transform: scaleX(.3);
     }
@@ -289,12 +326,13 @@ section h2 {
         flex-direction: column;
         /* align-self: flex-end; */
     }
+
     .landing main.landing-content img {
         padding-top: 8rem;
-        height: 70%;
+        /* width: 70%; */
     }
 
-    .series-card a.thumb  {
+    .series-card a.thumb {
         width: 150px;
     }
 }
@@ -302,15 +340,14 @@ section h2 {
 /* handphone */
 @media (max-width: 450px) {
     html {
-        font-size: 60%;
+        font-size: 65%;
     }
 
     .landing main.landing-content img {
-        padding-top: 8rem;
-        height: 60%;
+        width: 100%;
     }
 
-    .komik-container  main.komik-content {
+    .komik-container main.komik-content {
         justify-content: center;
     }
 
