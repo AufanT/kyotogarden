@@ -209,7 +209,7 @@ section h2 {
 
     color: var(--txt);
     padding: .1em .5rem;
-    font-size: .8rem;
+    font-size: .7rem;
     font-weight: 700;
     text-align: center;
 }
@@ -276,7 +276,6 @@ section h2 {
 
 /* footer */
 footer {
-    width: 100vw;
     background-color: var(--bg2);
     margin-top: 5rem;
     padding-block: 1rem;
@@ -325,10 +324,6 @@ footer .social a {
 footer .social a:hover, footer .copyright {
     color: var(--txt2);
 }
-
-
-
-
 
 
 
