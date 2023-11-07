@@ -273,6 +273,57 @@ section h2 {
     gap: .8rem;
 }
 
+/* footer */
+footer {
+    width: 100vw;
+    background-color: var(--bg2);
+    margin-top: 5rem;
+    padding-block: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer .footer-logo {
+    /* border: 1px solid black;  */
+    
+    width: 30rem;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column  ;
+    align-items: center;
+    text-align: center;
+}
+footer .footer-logo img {
+    width: 10vmax;
+}
+footer .footer-logo h4 {
+    font-size: 2vmax;
+}
+footer .footer-logo h4 span {
+    color: #ebd173;
+}
+footer .footer-logo p, footer .copyright {
+    font-size: .7rem;
+}
+footer .social {
+    /* border: 1px solid black;  */
+
+    display: flex;
+}
+footer .social a {
+    color: var(--txt);
+
+    display: inline-block;
+    margin-block: 1rem;
+    margin-inline: .7rem;
+
+    transition: all .2s ease-in;
+}
+footer .social a:hover, footer .copyright {
+    color: var(--txt2);
+}
 
 
 
