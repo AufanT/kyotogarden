@@ -205,10 +205,11 @@ section h2 {
     position: absolute;
     inset-block-start: 10px;
     inset-inline-start: 10px;
-    /* width: 8ch; */
-
+    border-radius: 3px;
+    
     color: var(--txt);
-    padding: .1em .5rem;
+    padding: .5em .4em;
+    text-transform: uppercase;
     font-size: .7rem;
     font-weight: 700;
     text-align: center;
