@@ -337,14 +337,14 @@ footer .social a:hover, footer .copyright {
 /* laptop */
 @media (max-width: 1366px) {
     html {
-        font-size: 75%;
+        font-size: 80%;
     }
 }
 
 /* tablet */
 @media (max-width: 768px) {
     html {
-        font-size: 62.5%;
+        font-size: 70%;
     }
 
     nav.navbar .navbar-extra #hamburger-menu {
@@ -396,7 +396,7 @@ footer .social a:hover, footer .copyright {
 /* handphone */
 @media (max-width: 450px) {
     html {
-        font-size: 55%;
+        font-size: 65%;
     }
 
     .landing main.landing-content img {
