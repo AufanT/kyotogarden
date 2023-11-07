@@ -209,7 +209,8 @@ section h2 {
 
     color: var(--txt);
     padding: .1em .5rem;
-    font-size: .7rem;
+    font-size: .8rem;
+    font-weight: 700;
     text-align: center;
 }
 
@@ -231,7 +232,7 @@ section h2 {
 
 .series-card .chapter a {
     color: var(--txt2);
-    font-size: .8rem;
+    font-size: .9rem;
     text-transform: lowercase;
 }
 
