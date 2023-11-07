@@ -352,9 +352,12 @@ footer .social a:hover, footer .copyright {
         position: absolute;
         top: 100%;
         right: -100%;
+
         background-color: rgba(5, 60, 81, 0.8);
-        width: 20rem;
+        width: 50vw;
         height: 100vh;
+        text-align: center;
+
         transition: .3s;
     }
 
@@ -367,10 +370,6 @@ footer .social a:hover, footer .copyright {
         margin: 1.5rem;
         padding: .5rem;
         font-size: 1.5rem;
-    }
-
-    nav.navbar .navbar-nav a::after {
-        transform-origin: 0 0;
     }
 
     nav.navbar .navbar-nav a:hover::after {
