@@ -25,6 +25,7 @@ body {
     background-color: var(--bg);
     color: var(--txt);
     text-transform: capitalize;
+    overflow-x: hidden;
     /* height: 1000vh; */
 }
 
@@ -109,7 +110,7 @@ nav.navbar .navbar-extra #hamburger-menu {
 }
 
 .landing main.landing-content .kyotogarden-text h1 {
-    font-size: 5rem;
+    font-size: calc(4vmax + 1rem);
 }
 
 .landing main.landing-content .kyotogarden-text h1 span {
@@ -175,6 +176,7 @@ section h2 {
     /* border: 1px solid green; */
 
     position: relative;
+    margin-bottom: 1rem;
 
     display: block;
     overflow: hidden;
@@ -201,26 +203,10 @@ section h2 {
     transform: scale(1.1);
 }
 
-.series-card a.thumb span {
-    position: absolute;
-    inset-block-start: 10px;
-    inset-inline-start: 10px;
-    border-radius: 3px;
-    
-    color: var(--txt);
-    padding: .5em .4em;
-    text-transform: uppercase;
-    font-size: .7rem;
-    font-weight: 700;
-    text-align: center;
-}
-
 .series-card .title {
-    color: var(--txt);
+    color: var(--txt2);
     font-weight: 700;
     font-size: 1.3rem;
-
-    margin-block: .8rem;
 }
 
 .series-card .chapter {
@@ -229,15 +215,39 @@ section h2 {
     width: 100%;
     display: flex;
     justify-content: space-around;
+    align-items: center;
+
+    margin-top: 1rem;
 }
 
 .series-card .chapter a {
-    color: var(--txt2);
-    font-size: .9rem;
+    color: var(--txt);
+}
+.series-card .chapter a.numb-ch {
+    font-size: 80%;
+    font-weight: 700;
+}
+.series-card .chapter a.time-added {
     text-transform: lowercase;
+    font-size: 70%;
 }
 
+
 /* badges */
+.series-card a.thumb span {
+    position: absolute;
+    inset-block-start: 10px;
+    inset-inline-end: 10px;
+    border-radius: 3px;
+    width: 40%;
+    
+    color: var(--txt);
+    padding: .5em .4em;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 700;
+    text-align: center;
+}
 .manga-badges {
     background-color: rgb(187, 0, 0);
 }
@@ -305,6 +315,9 @@ footer .footer-logo h4 {
 footer .footer-logo h4 span {
     color: #ebd173;
 }
+footer .footer-logo p {
+    color: var(--txt);
+}
 footer .footer-logo p, footer .copyright {
     font-size: .7rem;
 }
@@ -334,14 +347,14 @@ footer .social a:hover, footer .copyright {
 /* laptop */
 @media (max-width: 1366px) {
     html {
-        font-size: 80%;
+        font-size: 90%;
     }
 }
 
 /* tablet */
 @media (max-width: 768px) {
     html {
-        font-size: 70%;
+        font-size: 80%;
     }
 
     nav.navbar .navbar-extra #hamburger-menu {
@@ -392,7 +405,7 @@ footer .social a:hover, footer .copyright {
 /* handphone */
 @media (max-width: 450px) {
     html {
-        font-size: 65%;
+        font-size: 70%;
     }
 
     .landing main.landing-content img {

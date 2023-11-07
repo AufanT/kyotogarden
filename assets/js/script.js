@@ -3,7 +3,7 @@ const navbarNav = document.querySelector('.navbar-nav');
 
 document.querySelector('#hamburger-menu').onclick = (e) => {
     navbarNav.classList.toggle('active');
-    e.preventDefault();
+    e.preventDefault()
 };
 
 // remove sidebar
