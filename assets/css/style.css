@@ -27,24 +27,24 @@ body {
     color: var(--txt);
     text-transform: capitalize;
     overflow-x: hidden;
-    /* height: 1000vh; */
 }
 
 /* search-menu */
 .search-menu {
     position: fixed;
     height: 10vh;
-    background-color: var(--bg2);   
+    background-color: var(--bg2);
 
     top: -100%;
     inset-inline: 0;
-    z-index: 99999;
+    z-index: 999999;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: .5s ease-in-out;
+    transition: .2s;
 }
+
 .search-menu .search-form {
     background-color: var(--txt2);
     border-radius: 5px;
@@ -55,6 +55,7 @@ body {
     height: 50%;
     margin-inline: 1rem;
 }
+
 .search-menu .search-form input {
     background-color: var(--txt2);
     width: 100%;
@@ -64,11 +65,13 @@ body {
     font-size: 1.2rem;
     font-family: 'Poppins', sans-serif;
 }
+
 .search-menu .search-form label {
     margin-right: 1rem;
     color: var(--bg);
     cursor: pointer;
 }
+
 .search-menu.active {
     top: 0;
     border-bottom: 1px solid var(--txt2);
@@ -79,6 +82,7 @@ nav.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 999;
 
     height: 10vh;
     padding: 1.2rem 7%;
@@ -89,7 +93,6 @@ nav.navbar {
     position: fixed;
     inset-block-start: 0;
     inset-inline: 0;
-    z-index: 9999;
 }
 nav.navbar .navbar-logo {
     font-size: 2rem;
@@ -133,12 +136,110 @@ nav.navbar .navbar-extra #hamburger-menu {
     display: none;
 }
 
+/* login menu */
+.login-menu {
+    background-color: rgba(0, 0, 0, .5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 99999;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login-menu.active {
+    display: flex;
+}
+.login-menu .login-box {
+    background-color: rgba(5, 60, 81, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 2rem 3rem;
+    transition: all .5s ease-in-out;
 
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+
+    z-index: 99999;
+}
+.login-menu .login-box .login-text {
+    border-bottom: 1px solid var(--txt2);
+    padding: 1rem .2rem;
+}
+.login-menu .login-box .login-text h1 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.login-menu .login-box .login-text span {
+    color: var(--txt2);
+}
+.login-menu .login-box .login-text img {
+    width: calc(30% + 15rem);
+}
+.login-menu .login-box .login-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.login-menu .login-box .login-form input {
+    width: 40%;
+    height: 35px;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding-inline: 1rem;
+}
+.login-menu .login-box .login-form label {
+    margin-top: 1rem;
+    color: var(--txt2);
+}
+.login-menu .login-box .login-form .cta {
+    text-align: right;
+    margin: 2rem;
+    color: var(--txt);
+}
+.login-menu .login-box .login-form .cta a{
+    text-align: right;
+    color: var(--txt2);
+}
+.login-menu .login-box .login-button {
+   display: flex;
+   justify-content: center;
+   gap: 3rem;
+}
+.login-menu .login-box .login-button button {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--bg);
+    background-color: var(--txt2);
+    width: 20em;
+    height: 100%;
+    padding-block: .5rem;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+.login-menu .login-box .login-button .log-in:hover {
+    border: 2px solid var(--txt2);
+    color: var(--txt2);
+    background-color: transparent;
+    transition: .2s linear;
+}
+.login-menu .login-box .login-button .sign-up{
+    border: 2px solid var(--txt2);
+    color: var(--txt2);
+    background-color: transparent;
+}
 
 /* landing page */
 .landing {
     height: 100vh;
     justify-content: center;
+    z-index: 1;
 }
 
 .landing main.landing-content {
@@ -147,6 +248,7 @@ nav.navbar .navbar-extra #hamburger-menu {
     justify-content: center;
 
 }
+
 .landing main.landing-content img {
     width: 40%;
 }
@@ -191,6 +293,7 @@ section {
     margin: auto;
 
     display: flex;
+    z-index: 1;
 }
 
 section h2 {
@@ -256,10 +359,12 @@ section h2 {
 .series-card .chapter a {
     color: var(--txt);
 }
+
 .series-card .chapter a.numb-ch {
     font-size: 80%;
     font-weight: 700;
 }
+
 .series-card .chapter a.time-added {
     text-transform: lowercase;
     font-size: 70%;
@@ -272,7 +377,7 @@ section h2 {
     inset-inline-end: 10px;
     border-radius: 3px;
     width: 40%;
-    
+
     color: var(--txt);
     padding: .5em .4em;
     text-transform: uppercase;
@@ -280,6 +385,7 @@ section h2 {
     font-weight: 700;
     text-align: center;
 }
+
 .manga-badges {
     background-color: rgb(187, 0, 0);
 }
@@ -321,33 +427,42 @@ footer {
     flex-direction: column;
     align-items: center;
 }
+
 footer .footer-logo {
     width: 30rem;
     margin: auto;
 
     display: flex;
-    flex-direction: column  ;
+    flex-direction: column;
     align-items: center;
     text-align: center;
 }
+
 footer .footer-logo img {
     width: 10vmax;
 }
+
 footer .footer-logo h4 {
     font-size: 2vmax;
 }
+
 footer .footer-logo h4 span {
     color: #ebd173;
 }
+
 footer .footer-logo p {
     color: var(--txt);
 }
-footer .footer-logo p, footer .copyright {
+
+footer .footer-logo p,
+footer .copyright {
     font-size: .7rem;
 }
+
 footer .social {
     display: flex;
 }
+
 footer .social a {
     color: var(--txt);
 
@@ -357,7 +472,9 @@ footer .social a {
 
     transition: all .2s ease-in;
 }
-footer .social a:hover, footer .copyright {
+
+footer .social a:hover,
+footer .copyright {
     color: var(--txt2);
 }
 
@@ -395,7 +512,6 @@ footer .social a:hover, footer .copyright {
 
         transition: .3s;
     }
-
     nav.navbar .navbar-nav.active {
         right: 0;
     }
@@ -411,12 +527,17 @@ footer .social a:hover, footer .copyright {
         transform: scaleX(.3);
     }
 
+    .login-menu .login-box .login-form input {
+        width: 50%;
+        height: 30px;
+    }
+
     .landing main.landing-content img {
         width: 90%;
     }
+
     .landing main.landing-content {
         flex-direction: column;
-        /* align-self: flex-end; */
     }
 
     .series-card a.thumb {
@@ -436,6 +557,13 @@ footer .social a:hover, footer .copyright {
 
     .komik-container main.komik-content {
         justify-content: center;
+    }
+
+    .login-menu .login-box .login-form input {
+        width: 90%;
+        height: 25px;
+        border-radius: 10px;
+        margin-top: 10px;
     }
 
 }
