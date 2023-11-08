@@ -1,8 +1,8 @@
 // toggle class active
 const navbarNav = document.querySelector('.navbar-nav');
-const searchMenu = document.querySelector('.search-menu')
-const navbar = document.querySelector('.navbar')
-const searchBox = document.querySelector('#search-box')
+const searchMenu = document.querySelector('.search-menu');
+const navbar = document.querySelector('.navbar');
+const searchBox = document.querySelector('#search-box');
 
 document.querySelector('#hamburger-menu').onclick = (e) => {
     navbarNav.classList.toggle('active');
