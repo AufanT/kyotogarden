@@ -142,16 +142,15 @@ nav.navbar .navbar-extra #hamburger-menu {
     width: 100vw;
     height: 100vh;
     position: fixed;
-    z-index: 99;
-    display: flex;
-    opacity: 0;
+    z-index: 99999;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: .3s;
 }
 .login-menu.active {
-    opacity: 1;
+    display: flex;
 }
 .login-menu .login-box {
     background-color: rgba(5, 60, 81, 0.8);
