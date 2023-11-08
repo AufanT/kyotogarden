@@ -18,6 +18,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -29,11 +30,57 @@ body {
     /* height: 1000vh; */
 }
 
+/* search-menu */
+.search-menu {
+    position: fixed;
+    height: 10vh;
+    background-color: var(--bg2);   
+
+    top: -100%;
+    inset-inline: 0;
+    z-index: 99999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s ease-in-out;
+}
+.search-menu .search-form {
+    background-color: var(--txt2);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 50%;
+    margin-inline: 1rem;
+}
+.search-menu .search-form input {
+    background-color: var(--txt2);
+    width: 100%;
+    margin-inline: 1rem;
+    color: var(--bg);
+    font-weight: 700;
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+}
+.search-menu .search-form label {
+    margin-right: 1rem;
+    color: var(--bg);
+    cursor: pointer;
+}
+.search-menu.active {
+    top: 0;
+    border-bottom: 1px solid var(--txt2);
+}
+
 /* navbar */
 nav.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    height: 10vh;
     padding: 1.2rem 7%;
     background-color: rgba(5, 60, 81, 0.8);
     border-bottom: 1px solid var(--txt2);
@@ -44,7 +91,6 @@ nav.navbar {
     inset-inline: 0;
     z-index: 9999;
 }
-
 nav.navbar .navbar-logo {
     font-size: 2rem;
     font-weight: 700;
@@ -91,15 +137,11 @@ nav.navbar .navbar-extra #hamburger-menu {
 
 /* landing page */
 .landing {
-    /* border: 1px solid black;     */
-
     height: 100vh;
     justify-content: center;
 }
 
 .landing main.landing-content {
-    /* border: 1px solid black;     */
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -145,9 +187,6 @@ nav.navbar .navbar-extra #hamburger-menu {
 
 /* section style settings */
 section {
-    /* border: 1px solid black; */
-
-    /* height: 100vh; */
     max-width: 1200px;
     margin: auto;
 
@@ -173,8 +212,6 @@ section h2 {
 }
 
 .series-card a.thumb {
-    /* border: 1px solid green; */
-
     position: relative;
     margin-bottom: 1rem;
 
@@ -187,8 +224,6 @@ section h2 {
 }
 
 .series-card a.thumb img {
-    /* border: 1px solid yellow; */
-
     width: 100%;
     height: 100%;
     object-fit: fill;
@@ -210,8 +245,6 @@ section h2 {
 }
 
 .series-card .chapter {
-    /* border: 1px solid green;  */
-
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -231,7 +264,6 @@ section h2 {
     text-transform: lowercase;
     font-size: 70%;
 }
-
 
 /* badges */
 .series-card a.thumb span {
@@ -258,28 +290,22 @@ section h2 {
 
 /* komik section */
 .komik-container {
-    /* border: 1px solid green;  */
 
     flex-direction: column;
     max-width: 1220px;
     padding-inline: 2%;
 }
 
-
 /* today */
 .komik-container main.today-content {
-    /* border: 1px solid black; */
     display: flex;
     gap: .8rem;
 
     overflow-x: scroll;
 }
 
-
 /* manhwa and manga */
 .komik-container main.komik-content {
-    /* border: 1px solid black;  */
-
     display: flex;
     flex-wrap: wrap;
     gap: .8rem;
@@ -296,8 +322,6 @@ footer {
     align-items: center;
 }
 footer .footer-logo {
-    /* border: 1px solid black;  */
-    
     width: 30rem;
     margin: auto;
 
@@ -322,8 +346,6 @@ footer .footer-logo p, footer .copyright {
     font-size: .7rem;
 }
 footer .social {
-    /* border: 1px solid black;  */
-
     display: flex;
 }
 footer .social a {
