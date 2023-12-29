@@ -320,7 +320,7 @@ section h2 {
     padding-block: 1rem;
 }
 
-.series-card a.thumb {
+.series-card .thumb {
     position: relative;
     margin-bottom: 1rem;
 
@@ -332,18 +332,21 @@ section h2 {
     border-radius: 10px;
 }
 
-.series-card a.thumb img {
+.series-card .thumb img {
+    /* display: inline-block; */
     width: 100%;
     height: 100%;
     object-fit: fill;
     object-position: top;
     border-radius: 10px;
     vertical-align: middle;
-
-    transition: 0.2s ease-in-out;
 }
 
-.series-card a.thumb img:hover {
+.series-card .thumb a {
+    display: inline-block;
+    transition: .2s ease-in-out;
+}
+.series-card .thumb a:hover {
     transform: scale(1.1);
 }
 
@@ -377,7 +380,7 @@ section h2 {
 }
 
 /* badges */
-.series-card a.thumb span {
+.series-card .thumb span {
     position: absolute;
     inset-block-start: 10px;
     inset-inline-end: 10px;
