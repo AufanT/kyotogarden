@@ -111,6 +111,10 @@ nav.navbar .navbar-nav a {
     margin: 0 1rem;
 }
 
+/* nav.navbar .navbar-nav a.active {
+    color: var(--txt2);
+} */
+
 nav.navbar .navbar-nav a:hover {
     color: var(--txt2);
 }
@@ -322,13 +326,9 @@ section h2 {
 
 .series-card .thumb {
     position: relative;
-    margin-bottom: 1rem;
-
-    display: block;
     overflow: hidden;
     width: 175px;
     height: 260px;
-
     border-radius: 10px;
 }
 
@@ -336,18 +336,36 @@ section h2 {
     /* display: inline-block; */
     width: 100%;
     height: 100%;
-    object-fit: fill;
-    object-position: top;
+    object-fit: cover;
+    object-position: center;
     border-radius: 10px;
-    vertical-align: middle;
+    transition: transform 0.4s ease;
+    display: block;
+    position: relative;
+    z-index: 1;
 }
 
 .series-card .thumb a {
     display: inline-block;
     transition: .2s ease-in-out;
 }
-.series-card .thumb a:hover {
+
+.series-card .thumb::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* warna hitam transparan */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+    z-index: 1;
+}
+.series-card .thumb:hover img {
     transform: scale(1.1);
+}
+
+.series-card .thumb:hover::after {
+    opacity: 1;
 }
 
 .series-card .title {
