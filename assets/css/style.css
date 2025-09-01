@@ -32,7 +32,7 @@ body {
 /* search-menu */
 .search-menu {
     position: fixed;
-    height: 10vh;
+    height: 9vh;
     background-color: var(--bg2);
 
     top: -100%;
@@ -84,7 +84,7 @@ nav.navbar {
     align-items: center;
     z-index: 999;
 
-    height: 10vh;
+    height: 9vh;
     padding: 1.2rem 7%;
     background-color: rgba(5, 60, 81, 0.8);
     border-bottom: 1px solid var(--txt2);
